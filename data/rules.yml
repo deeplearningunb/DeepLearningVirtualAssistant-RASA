@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: Dizer adeus sempre que o usuario dizer adeus
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Dizer 'Eu sou um robo' sempre que o usuario questionar
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
