@@ -66,21 +66,32 @@
 
 ## RNN
 
-    ### Definição
+    Definição
 
-    > SAD
+        RNN significa recurrent neural network, trauduzido para português como rede neural recorrente.
+        Uma Rede Neural Recorrente (RNN) é um algoritmo de Aprendizado Profundo que pode captar uma sequência de dados e ser capaz de aprender a reconhecer essa sequência.
+        As conexões entre os nós formam um grafo direcionado ao longo de uma sequência temporal. Isso permite que ele exiba um comportamento dinâmico temporal. Derivado de redes neurais feedforward, os RNNs podem usar seu estado interno (memória) para processar sequências de entradas de comprimento variável.
 
-    ### Arquitetura
+    Arquitetura
 
-    > png
+        Considerando uma rede Neural feed-forward simples com uma camada oculta. Se {X} _ {t} for a entrada e {Y} _ {t} for a saída na etapa de tempo t, tudo o que precisamos fazer é criar um feedback conexão da camada oculta a ela mesma para acessar informações na etapa t-1. O ciclo de feedback implica que há um atraso de uma unidade de tempo. Portanto, uma das unidades de entrada em {h} _ {t} é {h} _ {t-1} , por sua vez a camada oculta recebe ambos {X } _ {t} e seu próprio último valor. Portanto, em poucas palavras, esse ciclo de feedback permite que as informações sejam passadas de uma etapa da rede para a próxima e, portanto, atua como memória na rede.
 
-    ### Ativadores
+    Ativadores
 
-    > att
+        A função de ativação pode ser qualquer uma das não linearidades ocultas habituais que geralmente é sigmoid, tanh ou ReLu. É um hiper parâmetro como outros tipos de redes neurais.
 
-    ### Camadas
+    Camadas
+        Geralmente existem 3 tipos de camadas RNN disponíveis, você pode encontrá-las na biblioteca tensorflow, sendo elas: Basic RNN Block, LSTM e GRU.
 
-    5
+    Exemplos:
+        https://youtu.be/LY7x2Ihqjmc
+
+    Uso:
+        https://github.com/deeplearningunb/building-rnn
+
+    font :
+    https://towardsmachinelearning.org/recurrent-neural-network-architecture-explained-in-detail/
+    https://docs.google.com/presentation/d/1MU-IQB6nxd6fPt9-1hJaByOzTAxSSXT4Gb17JxBz72o/edit#slide=id.g5a466f77f0_0_58
 
 ## SAE
 
