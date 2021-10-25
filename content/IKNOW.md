@@ -81,6 +81,7 @@
         A função de ativação pode ser qualquer uma das não linearidades ocultas habituais que geralmente é sigmoid, tanh ou ReLu. É um hiper parâmetro como outros tipos de redes neurais.
 
     Camadas
+
         Geralmente existem 3 tipos de camadas RNN disponíveis, você pode encontrá-las na biblioteca tensorflow, sendo elas: Basic RNN Block, LSTM e GRU.
 
     Exemplos:
@@ -92,39 +93,36 @@
     font :
     https://towardsmachinelearning.org/recurrent-neural-network-architecture-explained-in-detail/
     https://docs.google.com/presentation/d/1MU-IQB6nxd6fPt9-1hJaByOzTAxSSXT4Gb17JxBz72o/edit#slide=id.g5a466f77f0_0_58
+    https://pianalytix.com/recurrent-neural-network-rnn/
 
 ## SAE
 
-    ### Definição
+    Definição
 
-    > SAD
+        SAE significa "Sequential Autoencoder", ou seja, uma rede autoencoder sequencial.
+        A rede autoencoder sequencial é uma rede neural que aprende a reconhecer uma sequência de dados, usando um processo de treinamento de recursos de aprendizagem não supervisionados por cada camada, o que resulta em uma precisão de previsão consideravelmente melhorada do modelo de calibração.
 
-    ### Arquitetura
+    Arquitetura
 
-    > png
+        A rede SAE é um modelo não supervisionado, ou seja, não tem um conjunto de dados de treinamento, sendo esta construída como uma camada oculta, que é a camada intermediária entre a entrada e a saída.
 
-    ### Ativadores
-
-    > att
-
-    ### Camadas
-
-    5
+    fonte:
+    https://www.sciencedirect.com/science/article/abs/pii/S135044952030668X#:~:text=The%20stacked%20auto-encoder%20%28SAE%29%20deep%20neural%20network%20is,considerably%20improved%20prediction%20accuracy%20of%20the%20calibration%20model%2C%2C.
 
 ## SOM
 
-    ### Definição
+    Definição
 
     > SAD
 
-    ### Arquitetura
+    Arquitetura
 
     > png
 
-    ### Ativadores
+    Ativadores
 
     > att
 
-    ### Camadas
+    Camadas
 
     5
