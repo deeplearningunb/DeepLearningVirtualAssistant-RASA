@@ -113,16 +113,19 @@
 
     Definição
 
-    > SAD
+        SOM signfica Self Organizing Map, traduzindo para português temos Mapa Auto Organizável, esta é uma rede neural que aprende a reconhecer um mapa de dados, usando um processo de treinamento de recursos de aprendizagem não supervisionados por cada camada, o que resulta em uma precisão de previsão consideravelmente melhorada do modelo de calibração.
 
     Arquitetura
 
-    > png
+        O SOM um contém duas camadas: uma camada de entrada e uma camada de saída (mapa de feições). O SOM inicia o mapeamento de recursos inicializando um vetor de peso. Pesos em SOM têm uma conotação completamente diferente do que em ANN. Na modelagem de uma rede neural: a função de ativação é aplicada à combinação linear dos pesos e valores de entrada para produzir saída para cada um dos neurônios na arquitetura. Por outro lado, o SOM não aplica a função de ativação e emprega pesos como as características do neurônio na arquitetura. Os pesos geralmente são gerados aleatoriamente. A motivação de usar o vetor de peso como características do neurônio é empurrar cada uma das linhas (observações) dos dados fornecidos para um espaço imaginário onde cada uma das linhas atua como um ponto. 
 
     Ativadores
 
-    > att
+        A rede SOM não possui ativadores e a função de ativação é aplicada ao vetor de pesos.
 
     Camadas
+    
+        O SOM possui apenas uma camada de entrada e uma camada de saída.
 
-    5
+    fontes:
+    www.academia.edu/4029195/SOM_ARTIFICIAL_NEURAL_NETWORK
