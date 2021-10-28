@@ -1,34 +1,50 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Olá! Como está você?"
-
-  utter_cheer_up:
-  - text: "Aqui está algo que pode te animar:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Isso ajudou você ?"
-
-  utter_happy:
-  - text: "Ótimo, aguente firme!"
-
-  utter_goodbye:
-  - text: "Tchau"
-
-  utter_iamabot:
-  - text: "Eu sou um robô, desenvolvido pelo framework Rasa."
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - goodbye
+  - mood_great
+  - affirm
+  - deny
+  - mood_unhappy
+  - bot_challenge
+  - ask_name
+
+entities:
+  - location
+  - facility_type
+  
+slots:
+  location:
+    type: text
+  facility_type:
+    type: text
+
+responses:
+  utter_greet:
+  - text: Olá! Como está você?
+  utter_cheer_up:
+  - text: 'Aqui está algo que pode te animar:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Isso ajudou você?
+  utter_happy:
+  - text: Ótimo, se cuide!
+  utter_goodbye:
+  - text: Tchau!
+  utter_iamabot:
+  - text: Eu sou um robô, desenvolvido com a framework Rasa
+  utter_ask_name:
+  - image: "https://i.imgur.com/zTvA58i.jpeg"
+    text: Oi, meu nome é DeepEnde e sou um bot para ensinar deeplearning. Como posso ajudar?
+  - text: Eu me chamo DeepEnde.
+  utter_ask_location:
+  - text: Você pode me dizer sua localização?
+  - text: Para saber seu estado {facility_type} Eu preciso que me informe.
+actions:
+- utter_goodbye
+- utter_greet
+- utter_happy
+- action_facility_search

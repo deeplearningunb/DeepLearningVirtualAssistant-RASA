@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -12,7 +11,6 @@ nlu:
     - vamos lá
     - boa madrugada
     - eai
-
 - intent: goodbye
   examples: |
     - até próxima
@@ -25,7 +23,6 @@ nlu:
     - tenha uma boa noite
     - tchau tchau
     - vlw flw
-
 - intent: affirm
   examples: |
     - sim
@@ -40,7 +37,6 @@ nlu:
     - pode ser
     - entendo
     - eu acredito que sim
-
 - intent: deny
   examples: |
     - não
@@ -52,7 +48,6 @@ nlu:
     - sem chance
     - não na realidade
     - eu acredito que não
-
 - intent: mood_great
   examples: |
     - perfeito
@@ -65,7 +60,7 @@ nlu:
     - eu me sinto maravilhoso
     - super animado
     - extremamente bem
-
+    - bem
 - intent: mood_unhappy
   examples: |
     - meu dia foi terrível
@@ -81,7 +76,6 @@ nlu:
     - mal
     - muito
     - extremamente mal
-
 - intent: bot_challenge
   examples: |
     - você é um robô ?
@@ -91,3 +85,9 @@ nlu:
     - eu estou falando com um robô ?
     - eu estou falando com um robo ?
     - eu estou falando com um humano ?
+- intent: ask_name
+  examples: |
+    - Qual é o seu nome?
+    - Posso saber o seu nome?
+    - Como as pessoas te chamam?
+    - Você tem um nome?
