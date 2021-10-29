@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -12,7 +11,6 @@ nlu:
     - vamos lá
     - boa madrugada
     - eai
-
 - intent: goodbye
   examples: |
     - até próxima
@@ -25,7 +23,6 @@ nlu:
     - tenha uma boa noite
     - tchau tchau
     - vlw flw
-
 - intent: affirm
   examples: |
     - sim
@@ -40,7 +37,6 @@ nlu:
     - pode ser
     - entendo
     - eu acredito que sim
-
 - intent: deny
   examples: |
     - não
@@ -52,12 +48,11 @@ nlu:
     - sem chance
     - não na realidade
     - eu acredito que não
-
 - intent: mood_great
   examples: |
     - perfeito
     - ótimo
-    - incrivel
+    - incrível
     - eu me sinto ótimo
     - maravilhoso
     - eu me sinto bem
@@ -65,7 +60,7 @@ nlu:
     - eu me sinto maravilhoso
     - super animado
     - extremamente bem
-
+    - bem
 - intent: mood_unhappy
   examples: |
     - meu dia foi terrível
@@ -81,7 +76,6 @@ nlu:
     - mal
     - muito
     - extremamente mal
-
 - intent: bot_challenge
   examples: |
     - você é um robô ?
@@ -91,3 +85,57 @@ nlu:
     - eu estou falando com um robô ?
     - eu estou falando com um robo ?
     - eu estou falando com um humano ?
+- intent: ask_bot_name
+  examples: |
+    - qual é o seu nome?
+    - posso saber o seu nome?
+    - como as pessoas te chamam?
+    - você tem um nome?
+- intent: tell_name
+  examples: |
+    - eu quero te dizer meu nome.
+    - guardar nome
+    - eu te direi meu nome
+    - você quer saber meu nome?
+- intent: repeat_name
+  examples: |
+    - qual o meu nome?
+    - diga meu nome.
+    - você sabe meu nome?
+    - repita meu nome.
+    - qual o meu nome
+- intent: give_name
+  examples: |
+    - [maria](user_name)
+    - meu nome é [mateus](user_name)
+    - é [gabriel](user_name)
+    - ana
+    - mateus
+- intent: ask_knowledge
+  examples: |
+    - o que você sabe?
+    - me diga o que sabe?
+    - quais conteúdos você tem conhecimento?
+    - me diga o que sabe
+    - me conte o que sabe
+- intent: ask_specific_knowledge
+  examples: |
+    - o que mais?
+    - tem mais algo?
+    - o que mais você sabe?
+    - o que escificamente você sabe?
+    - so isso?
+    - o que especificamente
+    - so isso
+- intent: tell_content
+  examples: |
+    - fale sobre [ann](content_name).
+    - me conte o que sabe sobre [cnn](content_name).
+    - me ensine sobre [rnn](content_name).
+    - me diga sobre diga [sae](content_name).
+    - me fale sobre [som](content_name).
+    - ann
+    - RNN
+    - rnn
+    - SAE
+    - som

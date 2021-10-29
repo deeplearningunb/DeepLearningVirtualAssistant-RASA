@@ -1,5 +1,6 @@
 version: "2.0"
 
+# Regras - São usadas para questões que acontem com mais frequencias
 rules:
 
 - rule: Dizer adeus sempre que o usuario dizer adeus
@@ -11,3 +12,21 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Resposta para o nome
+  steps:
+  - intent: ask_bot_name
+  - action: utter_say_name
+
+- rule: Dizer o nome quando o usuario pedir (se tiver)
+  steps:
+  - intent: repeat_name
+  - action: action_say_name
+
+- rule: Resposta para quais conteúdos sabe
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+
+
+
