@@ -1,6 +1,6 @@
 version: "2.0"
 
-# São "historias" caminhos que o usuário pode tomar:
+# Historias - São caminhos que o usuário pode tomar
 stories:
 
 - story: happy path
@@ -38,3 +38,130 @@ stories:
   - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
+
+- story: name path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - intent: repeat_name
+  - action: action_say_name
+
+- story: interactive_story_1
+  steps:
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - slot_was_set:
+    - user_name: mateus
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: tell_name
+  - action: utter_ask_name
+  - intent: give_name
+  - action: action_receive_name
+  - slot_was_set:
+    - user_name: mateus
+  - intent: repeat_name
+  - action: action_say_name
+  - intent: repeat_name
+  - action: action_say_name
+
+- story: definition path
+  steps:
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+- story: interactive_story_1
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: ann
+  - action: action_content_definition
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: RNN
+  - action: action_content_definition
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: ann
+  - action: action_content_definition
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: rnn
+  - action: action_content_definition
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: SAE
+  - action: action_content_definition
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: som
+  - action: action_content_definition
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
+  - intent: tell_content
+  - action: action_receive_content
+  - slot_was_set:
+    - content_name: som
+  - action: action_content_definition

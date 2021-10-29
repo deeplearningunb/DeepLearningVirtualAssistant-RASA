@@ -2,31 +2,31 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-# Intenções - São interações vindas do usuário
-# Ex: saudações, afirmações e perguntas
 intents:
-  - greet
-  - goodbye
-  - mood_great
-  - affirm
-  - deny
-  - mood_unhappy
-  - bot_challenge
-  - ask_name
-  - ask_knowledge
-  - ask_specific_knowledge
-
-# Entidades 
+- ask_knowledge
+- tell_content
+- ask_specific_knowledge
+- give_name
+- tell_name
+- repeat_name
+- affirm
+- goodbye
+- mood_great
+- greet
+- deny
+- mood_unhappy
+- bot_challenge
+- ask_bot_name
 entities:
-  - content_name
-  
-# Fendas: Espaços para memória 
-# slots:
-#   location:
-#     type: text
-
-# Respostas
+- content_name
+- user_name
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+  content_name:
+    type: text
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Olá! Como você está?
@@ -41,15 +41,26 @@ responses:
   - text: Tchau!
   utter_iamabot:
   - text: Eu sou um robô, desenvolvido com a framework Rasa
-  utter_ask_name:
+  utter_say_name:
   - text: Oi, meu nome é DeepEnde e sou um bot para ensinar deeplearning. Como posso ajudar?
-  -  text: Eu me chamo DeepEnde.
+  - text: Eu me chamo DeepEnde.
+  utter_ask_name:
+  - text: Qual seu nome?
+  - text: Diga seu nome.
+  - text: Pode me dizer
   utter_knowledge:
-  - text: Meus conhecimentos são relacionados a DeepLearning.
-
-# Ações
+  - text: No momento meus conhecimentos estão relacionados a DeepLearning.
+  utter_specific_knowledge:
+  - text: Sei sobre as seguintes redes neurais -> ANN, CNN, RNN, SAE e SOM. Quais delas você gostaria de conhecer?
 actions:
+- action_check_knowledge
+- action_content_definition
+- action_receive_content
+- action_receive_name
+- action_say_name
+- utter_ask_name
 - utter_goodbye
 - utter_greet
 - utter_happy
-- action_definition
+- utter_knowledge
+- utter_specific_knowledge

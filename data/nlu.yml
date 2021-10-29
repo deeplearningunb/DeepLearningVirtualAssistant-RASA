@@ -1,7 +1,5 @@
 version: "2.0"
 nlu:
-
-## Maior parte intenções
 - intent: greet
   examples: |
     - oi
@@ -87,27 +85,57 @@ nlu:
     - eu estou falando com um robô ?
     - eu estou falando com um robo ?
     - eu estou falando com um humano ?
-- intent: ask_name
+- intent: ask_bot_name
   examples: |
-    - Qual é o seu nome?
-    - Posso saber o seu nome?
-    - Como as pessoas te chamam?
-    - Você tem um nome?
+    - qual é o seu nome?
+    - posso saber o seu nome?
+    - como as pessoas te chamam?
+    - você tem um nome?
+- intent: tell_name
+  examples: |
+    - eu quero te dizer meu nome.
+    - guardar nome
+    - eu te direi meu nome
+    - você quer saber meu nome?
+- intent: repeat_name
+  examples: |
+    - qual o meu nome?
+    - diga meu nome.
+    - você sabe meu nome?
+    - repita meu nome.
+    - qual o meu nome
+- intent: give_name
+  examples: |
+    - [maria](user_name)
+    - meu nome é [mateus](user_name)
+    - é [gabriel](user_name)
+    - ana
+    - mateus
 - intent: ask_knowledge
   examples: |
-    - O que você sabe?
-    - Me diga o que sabe?
-    - Quais conteúdos você tem conhecimento?
+    - o que você sabe?
+    - me diga o que sabe?
+    - quais conteúdos você tem conhecimento?
+    - me diga o que sabe
+    - me conte o que sabe
 - intent: ask_specific_knowledge
   examples: |
-    - Fale sobre [ANN](content_name).
-    - Me conte o que sabe sobre [CNN](content_name).
-    - Me ensine sobre [RNN](content_name).
-    - Me diga sobre diga [SAE](content_name).
-    - Me fale sobre [SOM](content_name).
-- lookup: content_name
+    - o que mais?
+    - tem mais algo?
+    - o que mais você sabe?
+    - o que escificamente você sabe?
+    - so isso?
+    - o que especificamente
+    - so isso
+- intent: tell_content
   examples: |
-    - ANN
-    - CNN
+    - fale sobre [ann](content_name).
+    - me conte o que sabe sobre [cnn](content_name).
+    - me ensine sobre [rnn](content_name).
+    - me diga sobre diga [sae](content_name).
+    - me fale sobre [som](content_name).
+    - ann
     - RNN
-
+    - rnn
+    - SAE
+    - som

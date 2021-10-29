@@ -15,16 +15,18 @@ rules:
 
 - rule: Resposta para o nome
   steps:
-  - intent: ask_name
-  - action: utter_ask_name
+  - intent: ask_bot_name
+  - action: utter_say_name
+
+- rule: Dizer o nome quando o usuario pedir (se tiver)
+  steps:
+  - intent: repeat_name
+  - action: action_say_name
 
 - rule: Resposta para quais conteúdos sabe
   steps:
   - intent: ask_knowledge
   - action: utter_knowledge
 
-- rule: Resposta para o conteúdo específico
-  steps:
-  - intent: ask_specific_knowledge
-  - action: action_definition
+
 
