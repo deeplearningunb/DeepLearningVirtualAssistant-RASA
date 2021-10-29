@@ -1,5 +1,6 @@
 version: "2.0"
 
+# Regras - São usadas para questões que acontem com mais frequencias
 rules:
 
 - rule: Dizer adeus sempre que o usuario dizer adeus
@@ -16,3 +17,14 @@ rules:
   steps:
   - intent: ask_name
   - action: utter_ask_name
+
+- rule: Resposta para quais conteúdos sabe
+  steps:
+  - intent: ask_knowledge
+  - action: utter_knowledge
+
+- rule: Resposta para o conteúdo específico
+  steps:
+  - intent: ask_specific_knowledge
+  - action: action_definition
+

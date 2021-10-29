@@ -2,6 +2,9 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+# Intenções - São interações vindas do usuário
+# Ex: saudações, afirmações e perguntas
 intents:
   - greet
   - goodbye
@@ -11,20 +14,22 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_name
+  - ask_knowledge
+  - ask_specific_knowledge
 
+# Entidades 
 entities:
-  - location
-  - facility_type
+  - content_name
   
-slots:
-  location:
-    type: text
-  facility_type:
-    type: text
+# Fendas: Espaços para memória 
+# slots:
+#   location:
+#     type: text
 
+# Respostas
 responses:
   utter_greet:
-  - text: Olá! Como está você?
+  - text: Olá! Como você está?
   utter_cheer_up:
   - text: 'Aqui está algo que pode te animar:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -37,14 +42,14 @@ responses:
   utter_iamabot:
   - text: Eu sou um robô, desenvolvido com a framework Rasa
   utter_ask_name:
-  - image: "https://i.imgur.com/zTvA58i.jpeg"
-    text: Oi, meu nome é DeepEnde e sou um bot para ensinar deeplearning. Como posso ajudar?
-  - text: Eu me chamo DeepEnde.
-  utter_ask_location:
-  - text: Você pode me dizer sua localização?
-  - text: Para saber seu estado {facility_type} Eu preciso que me informe.
+  - text: Oi, meu nome é DeepEnde e sou um bot para ensinar deeplearning. Como posso ajudar?
+  -  text: Eu me chamo DeepEnde.
+  utter_knowledge:
+  - text: Meus conhecimentos são relacionados a DeepLearning.
+
+# Ações
 actions:
 - utter_goodbye
 - utter_greet
 - utter_happy
-- action_facility_search
+- action_definition

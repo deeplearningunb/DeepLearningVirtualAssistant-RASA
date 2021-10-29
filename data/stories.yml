@@ -1,5 +1,6 @@
 version: "2.0"
 
+# São "historias" caminhos que o usuário pode tomar:
 stories:
 
 - story: happy path

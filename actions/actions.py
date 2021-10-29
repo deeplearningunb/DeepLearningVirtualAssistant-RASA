@@ -7,8 +7,11 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
+from os import name
 from typing import Any, Text, Dict, List
 
+
+from pathlib import Path
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
@@ -28,18 +31,40 @@ class ActionHelloWorld(Action):
         return []
 
 
+# class ActionAskName(Action):
+
+#     def name(self) -> Text:
+#         return "action_facility_search"
+
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#         facility = tracker.get.slot("facility_type")
+#         estado = "Goias"
+#         dispatcher.utter_message(
+#             "Aqui ÔøΩ a sua localidade {}.{}".format(facility, estado))
+
+#         return [SlotSet("estado", estado)]
+
 class ActionAskName(Action):
+    knowledge = Path("data/content.txt").read_text().split("/n")
 
     def name(self) -> Text:
-        return "action_facility_search"
+        return "action_definition"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        facility = tracker.get.slot("facility_type")
-        estado = "Goias"
-        dispatcher.utter_message(
-            "Aqui È a sua localidade {}.{}".format(facility, estado))
+        for blob in tracker.latest_message['entities']:
+            print(tracker.latest_message)
+            if blob['entity'] == 'content_name':
+                name = blob['value']
+                if name in self.knowledge:
+                    dispatcher.utter_message(text=f"Sim, eu sei sobre {name}")
+                else:
+                    dispatcher.utter_message(
+                        text=f"Eu n√£o sei sobre {name}, desculpe.")
 
-        return [SlotSet("estado", estado)]
+        return []

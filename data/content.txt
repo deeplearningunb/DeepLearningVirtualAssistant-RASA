@@ -1,0 +1,5 @@
+ANN
+CNN
+RNN
+SAE
+SOM

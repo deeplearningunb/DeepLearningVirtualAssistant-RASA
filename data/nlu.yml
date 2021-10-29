@@ -1,5 +1,7 @@
 version: "2.0"
 nlu:
+
+## Maior parte intenções
 - intent: greet
   examples: |
     - oi
@@ -52,7 +54,7 @@ nlu:
   examples: |
     - perfeito
     - ótimo
-    - incrivel
+    - incrível
     - eu me sinto ótimo
     - maravilhoso
     - eu me sinto bem
@@ -91,3 +93,21 @@ nlu:
     - Posso saber o seu nome?
     - Como as pessoas te chamam?
     - Você tem um nome?
+- intent: ask_knowledge
+  examples: |
+    - O que você sabe?
+    - Me diga o que sabe?
+    - Quais conteúdos você tem conhecimento?
+- intent: ask_specific_knowledge
+  examples: |
+    - Fale sobre [ANN](content_name).
+    - Me conte o que sabe sobre [CNN](content_name).
+    - Me ensine sobre [RNN](content_name).
+    - Me diga sobre diga [SAE](content_name).
+    - Me fale sobre [SOM](content_name).
+- lookup: content_name
+  examples: |
+    - ANN
+    - CNN
+    - RNN
+
