@@ -133,7 +133,7 @@ class ActionContentCheck(Action):
             if blob['entity'] == 'content_name':
                 name = blob['value']
                 if name in self.knowledge:
-                    dispatcher.utter_message(text=f"Sim, é {name}")
+                    dispatcher.utter_message(text=f"Sim, eu sei sobre {name}")
                 else:
                     dispatcher.utter_message(
                         text=f"Eu não sei sobre {name}, desculpe.")
