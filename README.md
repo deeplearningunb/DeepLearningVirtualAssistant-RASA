@@ -27,4 +27,4 @@ Pela Tecnologia: RNN(Recurrent neural network).
 
 ## RoadMap: 
 
-| <img alt="" title="" src="https://github.com/deeplearningunb/SmartBot-RASA/tree/main/img/smartbot_2021-10-30_02.16am.png"> |
+<img alt="" title="" src="https://github.com/deeplearningunb/SmartBot-RASA/blob/main/img/smartbot_2021-10-30_02.16am.png">
