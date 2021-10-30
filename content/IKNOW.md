@@ -38,14 +38,11 @@
 
     Definição
     ---------
-        CNN significa Convolutional Neural Network, traduzido para português como rede neural convolucional.
-        Uma Rede Neural Convolucional (ConvNet / Convolutional Neural Network / CNN) é um algoritmo de Aprendizado Profundo que pode captar uma imagem de entrada, atribuir importância (pesos e vieses que podem ser aprendidos) a vários aspectos / objetos da imagem e ser capaz de diferenciar um do outro. O pré-processamento exigido em uma ConvNet é muito menor em comparação com outros algoritmos de classificação. Enquanto nos métodos primitivos os filtros são feitos à mão, com treinamento suficiente, as ConvNets têm a capacidade de aprender esses filtros / características.
+        CNN significa Convolutional Neural Network, traduzido para português como rede neural convolucional.Uma Rede Neural Convolucional (ConvNet / Convolutional Neural Network / CNN) é um algoritmo de Aprendizado Profundo que pode captar uma imagem de entrada, atribuir importância (pesos e vieses que podem ser aprendidos) a vários aspectos / objetos da imagem e ser capaz de diferenciar um do outro. O pré-processamento exigido em uma ConvNet é muito menor em comparação com outros algoritmos de classificação. Enquanto nos métodos primitivos os filtros são feitos à mão, com treinamento suficiente, as ConvNets têm a capacidade de aprender esses filtros / características.
 
     Arquitetura
     -----------
-        A arquitetura de uma ConvNet é análoga àquela do padrão de conectividade de neurônios no cérebro humano e foi inspirada na organização do Visual Cortex. Os neurônios individuais respondem a estímulos apenas em uma região restrita do campo visual conhecida como Campo Receptivo. Uma coleção desses campos se sobrepõe para cobrir toda a área visual. Os neurônios são conectados entre si para formar uma rede.
-
-        As Redes Neurais Convolucionais são compostas por quatro camadas primárias: CONV, POOL, RELU e FC. Pegando essas camadas e empilhando-as em um determinado padrão rende uma arquitetura CNN.
+        A arquitetura de uma ConvNet é análoga àquela do padrão de conectividade de neurônios no cérebro humano e foi inspirada na organização do Visual Cortex. Os neurônios individuais respondem a estímulos apenas em uma região restrita do campo visual conhecida como Campo Receptivo. Uma coleção desses campos se sobrepõe para cobrir toda a área visual. Os neurônios são conectados entre si para formar uma rede.As Redes Neurais Convolucionais são compostas por quatro camadas primárias: CONV, POOL, RELU e FC. Pegando essas camadas e empilhando-as em um determinado padrão rende uma arquitetura CNN.
 
     Ativadores
     ----------
@@ -53,9 +50,7 @@
 
     Camadas
     -------
-        A camada CONV é o bloco de construção central de uma Rede Neural Convolucional. Os parâmetros de camada CONV consistem em um conjunto de filtros k aprendendo (ou seja, "kernels"), onde cada filtro tem uma largura e uma altura, e são quase sempre quadrados. Estes filtros são pequenos (em termos de suas dimensões espaciais), mas se estendem por toda a profundidade do volume.
-
-        Depois de cada camada CONV em uma CNN, aplicamos uma função de ativação não linear, as camadas de ativação não são tecnicamente "camadas" (devido ao fato de que nenhum parâmetro/pesos são aprendidos dentro de uma camada de ativação) e às vezes são omitidos dos diagramas de arquitetura de rede, pois se presume que uma ativação segue imediatamente uma convolução
+        A camada CONV é o bloco de construção central de uma Rede Neural Convolucional. Os parâmetros de camada CONV consistem em um conjunto de filtros k aprendendo (ou seja, "kernels"), onde cada filtro tem uma largura e uma altura, e são quase sempre quadrados. Estes filtros são pequenos (em termos de suas dimensões espaciais), mas se estendem por toda a profundidade do volume.Depois de cada camada CONV em uma CNN, aplicamos uma função de ativação não linear, as camadas de ativação não são tecnicamente "camadas" (devido ao fato de que nenhum parâmetro/pesos são aprendidos dentro de uma camada de ativação) e às vezes são omitidos dos diagramas de arquitetura de rede, pois se presume que uma ativação segue imediatamente uma convolução
 
         Existem dois métodos para reduzir o tamanho de um volume de entrada — camadas CONV com um passo > 1 e camadas POOL. É comum inserir camadas POOL entre camadas CONV consecutivas em uma arquitetura CNN:
         INSUMO => CONV => RELU =pool de > => CONV => RELU =pool de > => FC
@@ -84,8 +79,7 @@
     Definição
     ---------
         RNN significa recurrent neural network, trauduzido para português como rede neural recorrente.
-        Uma Rede Neural Recorrente (RNN) é um algoritmo de Aprendizado Profundo que pode captar uma sequência de dados e ser capaz de aprender a reconhecer essa sequência.
-        As conexões entre os nós formam um grafo direcionado ao longo de uma sequência temporal. Isso permite que ele exiba um comportamento dinâmico temporal. Derivado de redes neurais feedforward, os RNNs podem usar seu estado interno (memória) para processar sequências de entradas de comprimento variável.
+        Uma Rede Neural Recorrente (RNN) é um algoritmo de Aprendizado Profundo que pode captar uma sequência de dados e ser capaz de aprender a reconhecer essa sequência.As conexões entre os nós formam um grafo direcionado ao longo de uma sequência temporal. Isso permite que ele exiba um comportamento dinâmico temporal. Derivado de redes neurais feedforward, os RNNs podem usar seu estado interno (memória) para processar sequências de entradas de comprimento variável.
 
     Arquitetura
     -----------
