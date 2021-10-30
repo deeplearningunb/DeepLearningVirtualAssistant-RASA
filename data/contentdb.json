@@ -1,0 +1,24 @@
+{
+    "content": [
+        {
+            "id": 1,
+            "name": "ann"
+        },
+        {
+            "id": 2,
+            "name": "cnn"
+        },
+        {
+            "id": 3,
+            "name": "rnn"
+        },
+        {
+            "id": 4,
+            "name": "som"
+        },
+        {
+            "id": 5,
+            "name": "sae"
+        }
+    ]
+}
