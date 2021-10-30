@@ -17,6 +17,7 @@ intents:
 - mood_unhappy
 - bot_challenge
 - ask_bot_name
+- query_knowledge_base
 entities:
 - content_name
 - user_name
@@ -25,8 +26,9 @@ slots:
     type: text
     influence_conversation: true
   content_name:
-    type: text
-    influence_conversation: true
+    # type: text
+    # influence_conversation: true
+    type: unfeaturized
 responses:
   utter_greet:
   - text: Olá! Como você está?

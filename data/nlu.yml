@@ -134,8 +134,17 @@ nlu:
     - me ensine sobre [rnn](content_name).
     - me diga sobre diga [sae](content_name).
     - me fale sobre [som](content_name).
-    - ann
-    - RNN
-    - rnn
-    - SAE
-    - som
+- intent: query_knowledge_base
+  examples: |
+    - fale sobre [contents]{"entity": "object_type", "value": "content"}.
+    - me conte o que sabe sobre [contents]{"entity": "object_type", "value": "content"}.
+    - me ensine sobre [contents]{"entity": "object_type", "value": "content"}.
+    - me diga sobre diga [contents]{"entity": "object_type", "value": "content"}.
+    - me fale sobre [contents]{"entity": "object_type", "value": "content"}.
+- synonym: content
+  examples: |
+    - contents
+    - conteudo
+- lookup: content_name
+  examples: |
+    data/content.text
