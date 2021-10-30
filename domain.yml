@@ -3,8 +3,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ask_knowledge
 - tell_content
+- ask_knowledge
 - ask_specific_knowledge
 - give_name
 - tell_name
@@ -19,15 +19,27 @@ intents:
 - ask_bot_name
 - query_knowledge_base
 entities:
-- content_name
 - user_name
+- content_name
+- content
+- object_type
 slots:
   user_name:
     type: text
     influence_conversation: true
+  knowledge_base_last_object:
+    type: unfeaturized
+  knowledge_base_last_object_type:
+    type: unfeaturized
+  knowledge_base_listed_objects:
+    type: unfeaturized
+  content: 
+    type: unfeaturized
   content_name:
     # type: text
     # influence_conversation: true
+    type: unfeaturized
+  object_type:
     type: unfeaturized
 responses:
   utter_greet:
@@ -56,6 +68,7 @@ responses:
   - text: Sei sobre as seguintes redes neurais -> ANN, CNN, RNN, SAE e SOM. Quais delas você gostaria de conhecer?
 actions:
 - action_check_knowledge
+- action_query_knowledge_base
 - action_content_definition
 - action_receive_content
 - action_receive_name

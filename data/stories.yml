@@ -118,18 +118,13 @@ stories:
 #     - content_name: ann
 #   - action: action_content_definition
 
-# - story: interactive_story_1
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: rnn
-#   - action: action_content_definition
-
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_content
+  - action: action_check_knowledge
+  
 # - story: interactive_story_2
 #   steps:
 #   - intent: ask_knowledge
@@ -178,5 +173,5 @@ stories:
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: tell_content
-  - action: action_check_knowledge
+  - intent: query_knowledge_base
+  - action: action_query_knowledge_base

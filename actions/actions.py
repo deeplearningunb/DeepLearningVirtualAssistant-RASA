@@ -7,6 +7,7 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
+import json
 from os import name
 from typing import Any, Text, Dict, List
 
@@ -118,7 +119,7 @@ class ActionSayName(Action):
 #         return []
 
 class ActionContentCheck(Action):
-    knowledge = Path("data/content.txt").read_text().split("/n")
+    knowledge = Path("data/content.txt").read_text().split(',')
 
     def name(self) -> Text:
         return "action_check_knowledge"
@@ -132,7 +133,7 @@ class ActionContentCheck(Action):
             if blob['entity'] == 'content_name':
                 name = blob['value']
                 if name in self.knowledge:
-                    dispatcher.utter_message(text=f"Sim, eu sei sobre {name}")
+                    dispatcher.utter_message(text=f"Sim, é {name}")
                 else:
                     dispatcher.utter_message(
                         text=f"Eu não sei sobre {name}, desculpe.")
