@@ -18,7 +18,7 @@ pipeline:
     epochs: 100
     evaluate_on_number_of_examples: 0
     evaluate_every_number_of_epochs: 5
-    tensorboard_log_directory: "./tensorboard"
+    tensorboard_log_directory: "./tensorboard/DIET"
     tensorboard_log_level: "epoch"
     constrain_similarities: true
   - name: EntitySynonymMapper
@@ -48,6 +48,6 @@ policies:
     batch_size: 32
     evaluate_on_number_of_examples: 0
     evaluate_every_number_of_epochs: 5
-    tensorboard_log_directory: "./tensorboard"
+    tensorboard_log_directory: "./tensorboard/TED"
     tensorboard_log_level: "epoch"
     constrain_similarities: true

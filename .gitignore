@@ -1,2 +1,3 @@
 __pycache__
-tensorboard/train/plugins
+tensorboard/DIET/train/plugins
+tensorboard/TED/train/plugins

@@ -6,14 +6,14 @@
     "support": 3,
     "confused_with": {}
   },
-  "object_type": {
+  "content_name": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 5,
     "confused_with": {}
   },
-  "content_name": {
+  "object_type": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
