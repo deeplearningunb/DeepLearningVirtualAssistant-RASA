@@ -3,27 +3,69 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4
-  },
-  "utter_did_that_help": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "action_listen": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11
+    "support": 5
   },
   "utter_cheer_up": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
+    "support": 3
+  },
+  "mood_unhappy": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 3
+  },
+  "goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 2
   },
-  "utter_happy": {
+  "greet": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "f1-score": 0.5454545454545454,
+    "support": 5
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 16
+  },
+  "mood_great": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "affirm": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_iamabot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "bot_challenge": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "deny": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "utter_did_that_help": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -33,25 +75,36 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2
+    "support": 4
   },
-  "accuracy": 1.0,
-  "macro avg": {
+  "utter_happy": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 24
+    "support": 3
+  },
+  "micro avg": {
+    "precision": 0.8936170212765957,
+    "recall": 0.8235294117647058,
+    "f1-score": 0.8571428571428571,
+    "support": 51
+  },
+  "macro avg": {
+    "precision": 0.7142857142857143,
+    "recall": 0.7095238095238096,
+    "f1-score": 0.6937229437229436,
+    "support": 51
   },
   "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 24
+    "precision": 0.8333333333333334,
+    "recall": 0.8235294117647058,
+    "f1-score": 0.8149138443256091,
+    "support": 51
   },
   "conversation_accuracy": {
-    "accuracy": 1.0,
-    "correct": 4,
+    "accuracy": 0.14285714285714285,
+    "correct": 1,
     "with_warnings": 0,
-    "total": 4
+    "total": 7
   }
 }

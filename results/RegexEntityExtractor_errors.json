@@ -1,0 +1,290 @@
+[
+  {
+    "text": "maria",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "maria",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "user_name",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9933900833129883,
+        "value": "maria",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "meu nome é mateus",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "mateus",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "user_name",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.7981900572776794,
+        "value": "mateus",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "é gabriel",
+    "entities": [
+      {
+        "start": 2,
+        "end": 9,
+        "value": "gabriel",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "user_name",
+        "start": 2,
+        "end": 9,
+        "confidence_entity": 0.9963548183441162,
+        "value": "gabriel",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "você sabe algo sobre ann.",
+    "entities": [
+      {
+        "start": 21,
+        "end": 24,
+        "value": "ann",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.997929573059082,
+        "value": "ann",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "você sabe cnn.",
+    "entities": [
+      {
+        "start": 10,
+        "end": 13,
+        "value": "cnn",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 10,
+        "end": 13,
+        "confidence_entity": 0.9984921216964722,
+        "value": "cnn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "sabe rnn.",
+    "entities": [
+      {
+        "start": 5,
+        "end": 8,
+        "value": "rnn",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 5,
+        "end": 8,
+        "confidence_entity": 0.997954249382019,
+        "value": "rnn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "conhece sae.",
+    "entities": [
+      {
+        "start": 8,
+        "end": 11,
+        "value": "sae",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9982665777206421,
+        "value": "sae",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "conhece algo sobre som.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 22,
+        "value": "som",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9965644478797913,
+        "value": "som",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "fale sobre contents.",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.9980102181434631,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "me conte o que sabe sobre contents.",
+    "entities": [
+      {
+        "start": 26,
+        "end": 34,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 26,
+        "end": 34,
+        "confidence_entity": 0.9978570342063904,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "me ensine sobre contents.",
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9979238510131836,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "me diga sobre diga contents.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 27,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 19,
+        "end": 27,
+        "confidence_entity": 0.9978979825973511,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "me fale sobre contents.",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.9979754090309143,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]
