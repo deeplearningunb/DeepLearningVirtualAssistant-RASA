@@ -1,0 +1,16 @@
+[
+  {
+    "text": "mateus",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "user_name",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.6168751120567322,
+        "value": "mateus",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
