@@ -1,0 +1,41 @@
+{
+  "content_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "object_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "user_name": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 3,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9285714285714286,
+    "recall": 1.0,
+    "f1-score": 0.962962962962963,
+    "support": 13
+  },
+  "macro avg": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9523809523809524,
+    "support": 13
+  },
+  "weighted avg": {
+    "precision": 0.9423076923076923,
+    "recall": 1.0,
+    "f1-score": 0.967032967032967,
+    "support": 13
+  }
+}

@@ -1,5 +1,1 @@
-ann
-cnn
-rnn
-sae
-som
+ann,cnn,rnn,sae,som

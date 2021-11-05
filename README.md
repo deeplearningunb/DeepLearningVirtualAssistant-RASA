@@ -16,7 +16,7 @@ Conteúdo novo e extenso com referências não muito fáceis de encontrar e gera
 
 ## Proposta de Solução
 
-Com o objetivo de auxiliar na disclipna o chatbot tem como objetivo responder em português as dúvidas mais frequentes dos alunos tanto relacionados ao tema como questões da própria disciplina como: links das apresentções, dia de entregas de trabalhos, menções entre outros. 
+O projeto DLVA(Deep Learning Virtual Assistant) visa criar um chatbot capaz de auxiliar o professor e os alunos da disciplina, por meio de respostas em português as dúvidas mais frequentes, disponibilizar informações sobre o plano de ensino e notas da disciplina.
 
 ### Objetivos:
 
@@ -36,14 +36,14 @@ Com o objetivo de auxiliar na disclipna o chatbot tem como objetivo responder em
 
 ## Arquitetura da Rede Neural
 
-(Adicionar)
+<br>O modelo de solução utilizado neste  projeto conta com o framework RASA que utiliza a arquitetura chamada Transformer Neural NetWork. Dentro dos principais arquivos de configuração do Rasa, encontra-se o TEDPolicy e  DietClassifier que são essenciais para a configuração da inteligência do bot e assim gerar um modelo treinado com capacidade de responder o usuário. Para realizar o treinamento e fazer a configuração, utiliza-se no TEDPolicy 3 camadas de transformers, uma camada de normalização e outra de sigmoíde. Para o DietClassifier 2 camadas de transformers, uma camada de normalização e outra sigmoíde. 
 
 ### 💻 Tecnologias usadas:
 IDE: Visual Studio Code.
 <br>Linguagem de programação: Python.
-<br>Bibliotecas: Pandas, Keras, TensorFlow, Jupyter.
+<br>Bibliotecas: Pandas, Keras, TensorFlow e Jupyter.
 <br>Frameworks: RASA
-<br>Anaconda
+<br>Plataforma: Anaconda
 
 ### 👦👦👦 Membros :
 | Nome | Matrícula |
@@ -52,7 +52,7 @@ IDE: Visual Studio Code.
 | Mateus de Siqueira Silva | 20/0024787 |
 | Pedro Vitor Augusto de Jesus | 20/0073249 |
 
-## Como executar
+## 💻 Como executar
 
 ### 1. Clone o repositório na sua máquina:
 ```git clone https://github.com/deeplearningunb/``` 
