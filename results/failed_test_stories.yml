@@ -2,13 +2,13 @@ version: "2.0"
 stories:
 - story: happy path 1 (.\tests\test_stories.yml)
   steps:
-  - intent: greet  # predicted: affirm: hello there!
+  - intent: greet  # predicted: nlu_fallback: hello there!
   - action: utter_greet
   - intent: mood_great  # predicted: give_name: amazing
   - action: utter_happy
 - story: happy path 2 (.\tests\test_stories.yml)
   steps:
-  - intent: greet  # predicted: affirm: hello there!
+  - intent: greet  # predicted: nlu_fallback: hello there!
   - action: utter_greet
   - intent: mood_great  # predicted: give_name: amazing
   - action: utter_happy
@@ -16,7 +16,7 @@ stories:
   - action: utter_goodbye
 - story: sad path 1 (.\tests\test_stories.yml)
   steps:
-  - intent: greet  # predicted: affirm: hello
+  - intent: greet
   - action: utter_greet
   - intent: mood_unhappy  # predicted: deny: not good
   - action: utter_cheer_up
@@ -25,7 +25,7 @@ stories:
   - action: utter_happy
 - story: sad path 2 (.\tests\test_stories.yml)
   steps:
-  - intent: greet  # predicted: affirm: hello
+  - intent: greet
   - action: utter_greet
   - intent: mood_unhappy  # predicted: deny: not good
   - action: utter_cheer_up
@@ -38,5 +38,5 @@ stories:
   - action: utter_goodbye
 - story: bot challenge (.\tests\test_stories.yml)
   steps:
-  - intent: bot_challenge  # predicted: greet: are you a bot?
+  - intent: bot_challenge  # predicted: nlu_fallback: are you a bot?
   - action: utter_iamabot
