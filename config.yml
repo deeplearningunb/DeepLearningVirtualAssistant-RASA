@@ -15,11 +15,17 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 100
+    epochs: 70
+    evaluate_on_number_of_examples: 0
+    evaluate_every_number_of_epochs: 5
+    tensorboard_log_directory: "./tensorboard/DIET"
+    tensorboard_log_level: "epoch"
     constrain_similarities: true
+    loss_type : cross_entropy
+
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 100
+    epochs: 70
     constrain_similarities: true
   - name: FallbackClassifier
     threshold: 0.3
@@ -37,8 +43,25 @@ policies:
   - name: RulePolicy
   - name: UnexpecTEDIntentPolicy
     max_history: 5
-    epochs: 100
+    epochs: 70
   - name: TEDPolicy
+    transformer_size:
+      text: 128
+      action_text: 128
+      label_action_text: 128
+      dialogue: 128
+    number_of_transformer_layers:
+      text: 3
+      action_text: 3
+      label_action_text: 3
+      dialogue: 3
+    model_confidence: linear_norm 
     max_history: 5
-    epochs: 100
+    epochs: 70
+    batch_size: 32
+    evaluate_on_number_of_examples: 0
+    evaluate_every_number_of_epochs: 5
+    tensorboard_log_directory: "./tensorboard/TED"
+    tensorboard_log_level: "epoch"
     constrain_similarities: true
+    loss_type : cross_entropy
