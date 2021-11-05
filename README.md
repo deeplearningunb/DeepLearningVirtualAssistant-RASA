@@ -1,3 +1,5 @@
+<p align="center" ><img alt="" title="" src="img/dlva.png" width="300" height="300"></p>
+
 # Deep Learning Virtual Assistent 🤖
 
 ## Fale com o bot sobre bots;
