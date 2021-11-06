@@ -39,6 +39,13 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: teste
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: hello_world_intent
+  - action: action_hello_world
+
 - story: name path
   steps:
   - intent: greet
@@ -76,98 +83,15 @@ stories:
   - intent: repeat_name
   - action: action_say_name
 
-# - story: definition path
-#   steps:
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-# - story: interactive_story_1
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: ann
-#   - action: action_content_definition
-
-# - story: interactive_story_1
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: RNN
-#   - action: action_content_definition
-
-# - story: interactive_story_2
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: ann
-#   - action: action_content_definition
-
-- story: interactive_story_1
+- story: definition
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: ask_knowledge
+  - action: utter_knowledge
+  - intent: ask_specific_knowledge
+  - action: utter_specific_knowledge
   - intent: tell_content
-  - action: action_check_knowledge
-  
-# - story: interactive_story_2
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: SAE
-#   - action: action_content_definition
-
-# - story: interactive_story_1
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: som
-#   - action: action_content_definition
-
-# - story: interactive_story_2
-#   steps:
-#   - intent: ask_knowledge
-#   - action: utter_knowledge
-#   - intent: ask_specific_knowledge
-#   - action: utter_specific_knowledge
-#   - intent: tell_content
-#   - action: action_receive_content
-#   - slot_was_set:
-#     - content_name: som
-#   - action: action_content_definition
-
-# - story: interactive_content
-#   steps: 
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: tell_content{"content_name":"ann"}
-#   - slot{"content_name":"ann"}
-#   - action: action_check_knowledge
+  - action: action_receive_content
+  - action: action_content_definition
 
 - story: interactive_content
   steps: 

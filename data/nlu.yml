@@ -139,12 +139,17 @@ nlu:
     - fale sobre [contents]{"entity": "object_type", "value": "content"}.
     - me conte o que sabe sobre [contents]{"entity": "object_type", "value": "content"}.
     - me ensine sobre [contents]{"entity": "object_type", "value": "content"}.
-    - me diga sobre diga [contents]{"entity": "object_type", "value": "content"}.
+    - me diga sobre [contents]{"entity": "object_type", "value": "content"}.
     - me fale sobre [contents]{"entity": "object_type", "value": "content"}.
+    - me explique sobre [ann](name) [contents]{"entity": "object_type", "value": "content"}.
 - synonym: content
   examples: |
     - contents
     - conteudo
-- lookup: content_name
+# - lookup: content_name
+#   examples: |
+#     - data/content.txt
+- intent: hello_world_intent
   examples: |
-    - data/content.txt
+    - diga hello
+    - fale hello
