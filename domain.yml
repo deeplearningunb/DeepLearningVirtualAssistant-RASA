@@ -1,4 +1,5 @@
 version: '2.0'
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -18,6 +19,7 @@ intents:
 - bot_challenge
 - ask_bot_name
 - query_knowledge_base
+- hello_world_intent
 entities:
 - user_name
 - content_name
@@ -36,36 +38,10 @@ slots:
   content: 
     type: unfeaturized
   content_name:
-    # type: text
-    # influence_conversation: true
-    type: unfeaturized
+    type: text
+    influence_conversation: true
   object_type:
     type: unfeaturized
-responses:
-  utter_greet:
-  - text: Olá! Como você está?
-  utter_cheer_up:
-  - text: 'Aqui está algo que pode te animar:'
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Isso ajudou você?
-  utter_happy:
-  - text: Ótimo, se cuide!
-  utter_goodbye:
-  - text: Tchau!
-  utter_iamabot:
-  - text: Eu sou um robô, desenvolvido com a framework Rasa
-  utter_say_name:
-  - text: Oi, meu nome é DeepEnde e sou um bot para ensinar deeplearning. Como posso ajudar?
-  - text: Eu me chamo DeepEnde.
-  utter_ask_name:
-  - text: Qual seu nome?
-  - text: Diga seu nome.
-  - text: Pode me dizer
-  utter_knowledge:
-  - text: No momento meus conhecimentos estão relacionados a DeepLearning.
-  utter_specific_knowledge:
-  - text: Sei sobre as seguintes redes neurais -> ANN, CNN, RNN, SAE e SOM. Quais delas você gostaria de conhecer?
 actions:
 - action_check_knowledge
 - action_query_knowledge_base
@@ -79,3 +55,4 @@ actions:
 - utter_happy
 - utter_knowledge
 - utter_specific_knowledge
+- action_hello_world

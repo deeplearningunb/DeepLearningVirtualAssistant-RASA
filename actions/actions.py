@@ -22,6 +22,16 @@ from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 
 from rasa_sdk.events import SlotSet
 
+import json
+
+with open('data/contentdb.json', 'r') as f:
+    data = json.load(f)
+
+print(data['content'][0]['name'])
+1
+2
+3
+
 
 class ActionHelloWorld(Action):
 
@@ -31,8 +41,8 @@ class ActionHelloWorld(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="Hello World!")
+        phrase = "Texto de teste para ver se funciona com o utter mensage"
+        dispatcher.utter_message(text="Hello world")
 
         return []
 
@@ -70,53 +80,44 @@ class ActionSayName(Action):
         return []
 
 
-# class ActionReceiveContent(Action):
+class ActionReceiveContent(Action):
 
-#     def name(self) -> Text:
-#         return "action_receive_content"
+    def name(self) -> Text:
+        return "action_receive_content"
 
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-#         text = tracker.latest_message['text']
-#         dispatcher.utter_message(text=f"Eu irei falar sobre {text}!")
+        text = tracker.latest_message['text']
+        dispatcher.utter_message(text=f"Eu irei falar sobre {text}!")
 
-#         return [SlotSet("content_name", text)]
+        return [SlotSet("content_name", text)]
 
 
-# class ActionContentDefinition(Action):
+class ActionContentDefinition(Action):
 
-#     def name(self) -> Text:
-#         return "action_content_definition"
+    def name(self) -> Text:
+        return "action_content_definition"
 
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-#         content = tracker.get_slot("content_name")
-#         if not content:
-#             dispatcher.utter_message(
-#                 text=f"Eu não sei qual conteúdo você quer que eu ensine")
-#         else:
-#             contentlow = content.lower()
-#             if contentlow == "ann":
-#                 dispatcher.utter_message(
-#                     text=f"{content} significa artificial neural network, traduzido para português como rede neural artificial. A rede neural artificial é uma rede artificial que utiliza uma série de neurônios para aprender, sendo este um sistema de hardware e/ou software padronizado após a operação de neurônios no cérebro humano.!")
-#             elif contentlow == "cnn":
-#                 dispatcher.utter_message(
-#                     text=f"{content} significa Convolutional Neural Network, traduzido para português como rede neural convolucional. Uma Rede Neural Convolucional (ConvNet / Convolutional Neural Network / CNN) é um algoritmo de Aprendizado Profundo que pode captar uma imagem de entrada, atribuir importância (pesos e vieses que podem ser aprendidos) a vários aspectos / objetos da imagem e ser capaz de diferenciar um do outro. O pré-processamento exigido em uma ConvNet é muito menor em comparação com outros algoritmos de classificação. Enquanto nos métodos primitivos os filtros são feitos à mão, com treinamento suficiente, as ConvNets têm a capacidade de aprender esses filtros / características.")
-#             elif contentlow == "rnn":
-#                 dispatcher.utter_message(
-#                     text=f"{content} significa recurrent neural network, trauduzido para português como rede neural recorrente. Uma Rede Neural Recorrente (RNN) é um algoritmo de Aprendizado Profundo que pode captar uma sequência de dados e ser capaz de aprender a reconhecer essa sequência. As conexões entre os nós formam um grafo direcionado ao longo de uma sequência temporal. Isso permite que ele exiba um comportamento dinâmico temporal. Derivado de redes neurais feedforward, os RNNs podem usar seu estado interno (memória) para processar sequências de entradas de comprimento variável.")
-#             elif contentlow == "sae":
-#                 dispatcher.utter_message(
-#                     text=f"{content} significa 'Sequential Autoencoder', ou seja, uma rede autoencoder sequencial. A rede autoencoder sequencial é uma rede neural que aprende a reconhecer uma sequência de dados, usando um processo de treinamento de recursos de aprendizagem não supervisionados por cada camada, o que resulta em uma precisão de previsão consideravelmente melhorada do modelo de calibração.")
-#             elif contentlow == "som":
-#                 dispatcher.utter_message(
-#                     text=f"{content} signfica Self Organizing Map, traduzindo para português temos Mapa Auto Organizável, esta é uma rede neural que aprende a reconhecer um mapa de dados, usando um processo de treinamento de recursos de aprendizagem não supervisionados por cada camada, o que resulta em uma precisão de previsão consideravelmente melhorada do modelo de calibração.")
+        content = tracker.get_slot("content_name")
+        if not content:
+            dispatcher.utter_message(
+                text=f"Eu não sei qual conteúdo você quer que eu ensine")
+        else:
+            contentlow = content.lower()
+            count = 0
+            while count < 5:
+                if data['content'][count]['name'] == contentlow:
+                    dispatcher.utter_message(
+                        text=data['content'][count]['description'])
+                count += 1
+        return []
 
-#         return []
 
 class ActionContentCheck(Action):
     knowledge = Path("data/content.txt").read_text().split(',')
