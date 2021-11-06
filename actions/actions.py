@@ -116,6 +116,11 @@ class ActionContentDefinition(Action):
                     dispatcher.utter_message(
                         text=data['content'][count]['description'])
                 count += 1
+
+                if count == 5:
+                    dispatcher.utter_message(
+                        text=f"Não conheço esse tema")
+
         return []
 
 
