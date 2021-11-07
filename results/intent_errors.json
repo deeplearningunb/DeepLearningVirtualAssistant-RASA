@@ -1,0 +1,42 @@
+[
+  {
+    "text": "correto",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "query_knowledge_base",
+      "confidence": 0.37845954298973083
+    }
+  },
+  {
+    "text": "extremamente mal",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9417793154716492
+    }
+  },
+  {
+    "text": "você tem um nome?",
+    "intent": "ask_bot_name",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6679844856262207
+    }
+  },
+  {
+    "text": "você sabe meu nome?",
+    "intent": "repeat_name",
+    "intent_prediction": {
+      "name": "tell_name",
+      "confidence": 0.7511136531829834
+    }
+  },
+  {
+    "text": "maria",
+    "intent": "give_name",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.27789124846458435
+    }
+  }
+]
