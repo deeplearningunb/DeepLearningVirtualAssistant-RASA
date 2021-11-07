@@ -9,16 +9,7 @@
         "entity": "user_name"
       }
     ],
-    "predicted_entities": [
-      {
-        "entity": "user_name",
-        "start": 0,
-        "end": 5,
-        "confidence_entity": 0.9901477694511414,
-        "value": "maria",
-        "extractor": "DIETClassifier"
-      }
-    ]
+    "predicted_entities": []
   },
   {
     "text": "meu nome é mateus",
@@ -35,7 +26,7 @@
         "entity": "user_name",
         "start": 11,
         "end": 17,
-        "confidence_entity": 0.9210258722305298,
+        "confidence_entity": 0.8759003281593323,
         "value": "mateus",
         "extractor": "DIETClassifier"
       }
@@ -56,7 +47,7 @@
         "entity": "user_name",
         "start": 2,
         "end": 9,
-        "confidence_entity": 0.993565022945404,
+        "confidence_entity": 0.9872176051139832,
         "value": "gabriel",
         "extractor": "DIETClassifier"
       }
@@ -77,7 +68,7 @@
         "entity": "content_name",
         "start": 21,
         "end": 24,
-        "confidence_entity": 0.995359480381012,
+        "confidence_entity": 0.9955804944038391,
         "value": "ann",
         "extractor": "DIETClassifier"
       }
@@ -98,7 +89,7 @@
         "entity": "content_name",
         "start": 10,
         "end": 13,
-        "confidence_entity": 0.9959555864334106,
+        "confidence_entity": 0.9973874688148499,
         "value": "cnn",
         "extractor": "DIETClassifier"
       }
@@ -114,16 +105,7 @@
         "entity": "content_name"
       }
     ],
-    "predicted_entities": [
-      {
-        "entity": "content_name",
-        "start": 5,
-        "end": 8,
-        "confidence_entity": 0.9966855645179749,
-        "value": "rnn",
-        "extractor": "DIETClassifier"
-      }
-    ]
+    "predicted_entities": []
   },
   {
     "text": "conhece sae.",
@@ -140,7 +122,7 @@
         "entity": "content_name",
         "start": 8,
         "end": 11,
-        "confidence_entity": 0.9963405132293701,
+        "confidence_entity": 0.9970189332962036,
         "value": "sae",
         "extractor": "DIETClassifier"
       }
@@ -161,7 +143,7 @@
         "entity": "content_name",
         "start": 19,
         "end": 22,
-        "confidence_entity": 0.9943382143974304,
+        "confidence_entity": 0.9958106279373169,
         "value": "som",
         "extractor": "DIETClassifier"
       }
@@ -182,7 +164,7 @@
         "entity": "object_type",
         "start": 11,
         "end": 19,
-        "confidence_entity": 0.99737548828125,
+        "confidence_entity": 0.9979021549224854,
         "value": "content",
         "extractor": "DIETClassifier",
         "processors": [
@@ -206,7 +188,7 @@
         "entity": "object_type",
         "start": 26,
         "end": 34,
-        "confidence_entity": 0.9964827299118042,
+        "confidence_entity": 0.9973631501197815,
         "value": "content",
         "extractor": "DIETClassifier",
         "processors": [
@@ -230,7 +212,7 @@
         "entity": "object_type",
         "start": 16,
         "end": 24,
-        "confidence_entity": 0.9975634813308716,
+        "confidence_entity": 0.9979289770126343,
         "value": "content",
         "extractor": "DIETClassifier",
         "processors": [
@@ -240,11 +222,11 @@
     ]
   },
   {
-    "text": "me diga sobre diga contents.",
+    "text": "me diga sobre contents.",
     "entities": [
       {
-        "start": 19,
-        "end": 27,
+        "start": 14,
+        "end": 22,
         "value": "content",
         "entity": "object_type"
       }
@@ -252,9 +234,9 @@
     "predicted_entities": [
       {
         "entity": "object_type",
-        "start": 19,
-        "end": 27,
-        "confidence_entity": 0.9974318146705627,
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.9979280233383179,
         "value": "content",
         "extractor": "DIETClassifier",
         "processors": [
@@ -278,7 +260,45 @@
         "entity": "object_type",
         "start": 14,
         "end": 22,
-        "confidence_entity": 0.9975429773330688,
+        "confidence_entity": 0.9979432225227356,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "me explique sobre ann contents.",
+    "entities": [
+      {
+        "start": 18,
+        "end": 21,
+        "value": "ann",
+        "entity": "name"
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9617178440093994,
+        "value": "ann",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9964205026626587,
         "value": "content",
         "extractor": "DIETClassifier",
         "processors": [

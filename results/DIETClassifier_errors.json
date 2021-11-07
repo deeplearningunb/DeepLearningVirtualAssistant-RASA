@@ -1,5 +1,17 @@
 [
   {
+    "text": "maria",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "maria",
+        "entity": "user_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
     "text": "mateus",
     "entities": [],
     "predicted_entities": [
@@ -7,9 +19,59 @@
         "entity": "user_name",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.6168751120567322,
+        "confidence_entity": 0.6548579931259155,
         "value": "mateus",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "sabe rnn.",
+    "entities": [
+      {
+        "start": 5,
+        "end": 8,
+        "value": "rnn",
+        "entity": "content_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "me explique sobre ann contents.",
+    "entities": [
+      {
+        "start": 18,
+        "end": 21,
+        "value": "ann",
+        "entity": "name"
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "value": "content",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_name",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9617178440093994,
+        "value": "ann",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9964205026626587,
+        "value": "content",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       }
     ]
   }
